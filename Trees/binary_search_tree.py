@@ -122,6 +122,27 @@ class BinarySearchTreeNode :
         return self
 
 
+    def height(self):
+
+        if self.left is None and self.right is None:
+            return 1
+        
+        lh = 0
+        rh = 0
+        if self.left:
+            lh = self.left.height()
+
+        if self.right:
+            rh = self.right.height()
+
+        h = 1 + max(lh,rh)
+        
+        return h
+
+
+
+
+
         
             
 
@@ -141,6 +162,7 @@ if __name__ == '__main__':
     print(tree.in_order_traversal())
     tree.Delete(50)
     print(tree.in_order_traversal())
+    print(tree.height())
     
 
 
