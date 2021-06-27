@@ -14,5 +14,5 @@ def subsets (ip, op):
     subsets(ip,op2)
 
 
-subsets("123","")
+subsets("abc","")
 
